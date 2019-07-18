@@ -54,6 +54,239 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&display=swap');
+
+// ------My Code begins here--------
+
+
+// Setting up REM Font base
+	body { font-size:62.5%; } /* =10px */
+
+
+// Variables
+
+	// Colors
+	@color-light-gold: #DBCDAF;
+	@color-med-gold: #b79c66;
+	@color-dark-gold: #99794b;
+	@color-base-white: #efefed;
+	@color-light-grey: #A09F9F;
+	@color-med-grey: #666565;
+	@color-dark-grey: #161911;
+	@color-base-green: #444622;
+
+	// Fonts
+
+	@font-raleway: Raleway;
+	@font-playfair: Playfair Display SC;
+
+
+
+// Mixins
+	.flex-column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex-row {
+		display: flex;
+		flex-direction: row
+	}
+
+	.content-box-margins-padding{
+		margin: 1rem 1rem 1rem 1rem;
+		padding: 2rem 2rem 2rem 2rem;
+	}
+
+	.skills-container-styling{
+		text-align: center;
+		width: 45%;
+		background-color:@color-light-gold;
+		margin: 1rem 1rem 1rem 1rem;
+		padding: 2rem 2rem 2rem 2rem;
+
+		@media screen and (max-width: 500px) {
+			width: 90%;
+		}
+
+	}
+
+
+	// Fonts
+	.raleway-regular{
+		font-family: @font-raleway;
+		font-weight: 400; 
+	}
+	.raleway-medium{
+		font-family: @font-raleway;
+		font-weight: 500; 
+	}
+	.raleway-semi-bold{
+		font-family: @font-raleway;
+		font-weight: 600; 
+	}
+	.raleway-bold{
+		font-family: @font-raleway;
+		font-weight: 700; 
+	}
+	.raleway-extra-bold{
+		font-family: @font-raleway;
+		font-weight: 800; 
+	}
+	.raleway-black{
+		font-family: @font-raleway;
+		font-weight: 900; 
+	}
+	.playfair-regular{
+		font-family: @font-playfair;
+		font-weight: 400;
+	}
+	.playfair-bold{
+		font-family: @font-playfair;
+		font-weight: 700;
+	}
+	.playfair-black{
+		font-family: @font-playfair;
+		font-weight: 900;
+	}
+
+
+
+
+
+//------ Styles -------//
+
+
+// Main Container
+.main-container{
+	margin: auto;
+	.flex-column();
+	padding: 1rem 1rem 1rem 1rem;
+	align-items: center;
+	width: 100%;
+	background-color: @color-base-white;
+	@media screen and (min-width: 1300px) {
+		width: 1200px;
+	}
+
+
+	// Heading Container
+	.resume-heading{
+		margin: auto
+		.flex-column();
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+
+		.fa-user-circle{
+			margin: 3.5rem 0 3.5rem 0;
+		}
+
+
+		.person-name{
+			.playfair-bold();
+			font-size: 4rem;
+			color: @color-dark-grey;
+			margin: 0 0 2rem 0;
+		}
+
+		.person-title{
+			.playfair-regular();
+			margin: auto;
+			margin-bottom: 2rem;
+			padding: .5rem 0 .5rem 0;
+			font-size: 2rem;
+			color: @color-dark-grey;
+			width: 95%;
+			border-top: solid .075rem @color-dark-gold;
+			border-bottom: solid .075rem @color-dark-gold;
+		}
+
+	}
+
+
+	// Content Container
+	.resume-content-container{
+		margin: auto;
+		.flex-column();
+		.raleway-regular();
+		justify-content: space-evenly;
+		width: 95%;
+		font-size: 1.5rem;
+		color: @color-dark-grey;
+
+
+		.content-separator{
+			margin: auto;
+			border-top: solid .075rem @color-dark-gold;
+			width: 95%;
+			
+		}
+
+		// .profile-container{
+
+		// }
+
+		.skills-container{
+			.flex-row();
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+
+			.soft-skills{
+				.skills-container-styling();
+			}
+			.hard-skills{
+				.skills-container-styling();
+			}
+			h2{
+				width: 100%;
+			}
+			.skills-content-separator{
+				margin: auto;
+				border-top: solid .075rem @color-dark-grey;
+				width: 95%;
+				padding: 0 0 1rem 0;
+			}
+
+
+
+		}
+
+		// .projects-container{
+
+		// }
+
+		.contact-container{
+			.flex-column();
+			justify-content: center;
+			align-items: center;
+
+			.contact-icons{
+
+			}
+		}
+
+
+		.resume-content{
+			.content-box-margins-padding();
+
+			h2{
+				.playfair-bold();
+				display: block;
+				text-align: center;
+				padding: 0 0 2rem 0;
+			}
+
+		}
+
+
+
+
+	}
+
+}
