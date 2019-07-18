@@ -192,6 +192,18 @@ body {
   margin: 1rem 1rem 1rem 1rem;
   padding: 2rem 2rem 2rem 2rem;
 }
+.skills-container-styling {
+  text-align: center;
+  width: 45%;
+  background-color: #DBCDAF;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+@media screen and (max-width: 500px) {
+  .skills-container-styling {
+    width: 90%;
+  }
+}
 .raleway-regular {
   font-family: Raleway;
   font-weight: 400;
@@ -286,6 +298,46 @@ body {
   border-top: solid 0.075rem #99794b;
   width: 95%;
 }
+.main-container .resume-content-container .skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .resume-content-container .skills-container .soft-skills {
+  text-align: center;
+  width: 45%;
+  background-color: #DBCDAF;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+@media screen and (max-width: 500px) {
+  .main-container .resume-content-container .skills-container .soft-skills {
+    width: 90%;
+  }
+}
+.main-container .resume-content-container .skills-container .hard-skills {
+  text-align: center;
+  width: 45%;
+  background-color: #DBCDAF;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+@media screen and (max-width: 500px) {
+  .main-container .resume-content-container .skills-container .hard-skills {
+    width: 90%;
+  }
+}
+.main-container .resume-content-container .skills-container h2 {
+  width: 100%;
+}
+.main-container .resume-content-container .skills-container .skills-content-separator {
+  margin: auto;
+  border-top: solid 0.075rem #161911;
+  width: 95%;
+  padding: 0 0 1rem 0;
+}
 .main-container .resume-content-container .contact-container {
   display: flex;
   flex-direction: column;
@@ -299,6 +351,7 @@ body {
 .main-container .resume-content-container .resume-content h2 {
   font-family: Playfair Display SC;
   font-weight: 700;
+  display: block;
   text-align: center;
   padding: 0 0 2rem 0;
 }

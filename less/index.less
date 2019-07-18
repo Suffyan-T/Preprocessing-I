@@ -102,6 +102,19 @@ html, body {
 		padding: 2rem 2rem 2rem 2rem;
 	}
 
+	.skills-container-styling{
+		text-align: center;
+		width: 45%;
+		background-color:@color-light-gold;
+		margin: 1rem 1rem 1rem 1rem;
+		padding: 2rem 2rem 2rem 2rem;
+
+		@media screen and (max-width: 500px) {
+			width: 90%;
+		}
+
+	}
+
 
 	// Fonts
 	.raleway-regular{
@@ -218,9 +231,31 @@ html, body {
 
 		// }
 
-		// .skills-container{
+		.skills-container{
+			.flex-row();
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
 
-		// }
+			.soft-skills{
+				.skills-container-styling();
+			}
+			.hard-skills{
+				.skills-container-styling();
+			}
+			h2{
+				width: 100%;
+			}
+			.skills-content-separator{
+				margin: auto;
+				border-top: solid .075rem @color-dark-grey;
+				width: 95%;
+				padding: 0 0 1rem 0;
+			}
+
+
+
+		}
 
 		// .projects-container{
 
@@ -242,6 +277,7 @@ html, body {
 
 			h2{
 				.playfair-bold();
+				display: block;
 				text-align: center;
 				padding: 0 0 2rem 0;
 			}
