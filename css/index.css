@@ -133,5 +133,40 @@ table {
 html,
 body {
   height: 100%;
-  background-color: aquamarine;
+}
+body {
+  font-size: 62.5%;
+}
+/* =10px */
+.flex-column-centered {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.main-container {
+  width: 1200px;
+  height: 800px;
+  background-color: whitesmoke;
+}
+.resume-heading {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.resume-heading .person-name {
+  margin: auto;
+  font-size: 4rem;
+  color: #161911;
+}
+.resume-heading .person-title {
+  margin: auto;
+  padding: 0.5rem 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: #161911;
+  width: 95%;
+  border-top: solid 0.2rem #DBCDAF;
+  border-bottom: solid 0.2rem #DBCDAF;
 }

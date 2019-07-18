@@ -55,6 +55,66 @@ table {
 
 html, body {
 	height: 100%;
-	background-color: aquamarine;
+}
+
+
+
+
+// ------My Code begins here--------
+
+
+// Setting up REM Font base
+	body { font-size:62.5%; } /* =10px */
+
+
+// Variables
+	@color-main-gold: #DBCDAF;
+	@color-main-black: #161911;
+
+
+
+// Mixins
+	.flex-column-centered {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+	}
+
+
+
+
+
+
+
+//------ Styles -------//
+.main-container{
+	width: 1200px;
+	height: 800px;
+	background-color: whitesmoke;
+}
+.resume-heading{
+	height: 400px;
+	.flex-column-centered();
+	justify-content: space-evenly;
+	text-align: center;
+
+	
+	.person-name{
+		margin: auto;
+		font-size: 4rem;
+		color: @color-main-black
+	}
+
+	.person-title{
+		margin: auto;
+		padding: .5rem 0 .5rem 0;
+		font-size: 1.3rem;
+		color: @color-main-black;
+		width: 95%;
+		border-top: solid .2rem @color-main-gold;
+		border-bottom: solid .2rem @color-main-gold;
+	}
+
+	
 }
 
