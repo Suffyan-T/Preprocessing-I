@@ -134,6 +134,48 @@ html,
 body {
   height: 100%;
 }
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwN4rWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwPIsWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwJYtWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwIouWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Raleway Black'), local('Raleway-Black'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwK4vWqZPBQ.ttf) format('truetype');
+}
 body {
   font-size: 62.5%;
 }
@@ -150,12 +192,48 @@ body {
   margin: 1rem 1rem 1rem 1rem;
   padding: 2rem 2rem 2rem 2rem;
 }
+.raleway-regular {
+  font-family: Raleway;
+  font-weight: 400;
+}
+.raleway-medium {
+  font-family: Raleway;
+  font-weight: 500;
+}
+.raleway-semi-bold {
+  font-family: Raleway;
+  font-weight: 600;
+}
+.raleway-bold {
+  font-family: Raleway;
+  font-weight: 700;
+}
+.raleway-extra-bold {
+  font-family: Raleway;
+  font-weight: 800;
+}
+.raleway-black {
+  font-family: Raleway;
+  font-weight: 900;
+}
+.playfair-regular {
+  font-family: Playfair Display SC;
+  font-weight: 400;
+}
+.playfair-bold {
+  font-family: Playfair Display SC;
+  font-weight: 700;
+}
+.playfair-black {
+  font-family: Playfair Display SC;
+  font-weight: 900;
+}
 .main-container {
+  margin: auto;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem 1rem 1rem;
-  align-content: center;
-  margin: auto;
+  align-items: center;
   width: 100%;
   background-color: #efefed;
 }
@@ -165,24 +243,28 @@ body {
   }
 }
 .main-container .resume-heading {
-  display: flex;
-  flex-direction: column;
+  margin: auto display: flex; flex-direction: column;;
   justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
 .main-container .resume-heading .fa-user-circle {
   margin: 3.5rem 0 3.5rem 0;
 }
 .main-container .resume-heading .person-name {
+  font-family: Playfair Display SC;
+  font-weight: 700;
   font-size: 4rem;
   color: #161911;
   margin: 0 0 2rem 0;
 }
 .main-container .resume-heading .person-title {
+  font-family: Playfair Display SC;
+  font-weight: 400;
   margin: auto;
   margin-bottom: 2rem;
   padding: 0.5rem 0 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #161911;
   width: 95%;
   border-top: solid 0.075rem #99794b;
@@ -192,6 +274,8 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
+  font-family: Raleway;
+  font-weight: 400;
   justify-content: space-evenly;
   width: 95%;
   font-size: 1.5rem;
@@ -202,21 +286,19 @@ body {
   border-top: solid 0.075rem #99794b;
   width: 95%;
 }
-.main-container .resume-content-container .resume-content {
-  margin: 1rem 1rem 1rem 1rem;
-  padding: 2rem 2rem 2rem 2rem;
-}
-.main-container .resume-content-container .resume-content h2 {
-  text-align: center;
-  padding: 0 0 1rem 0;
-}
-.main-container .resume-content-container .resume-content .contact-container {
+.main-container .resume-content-container .contact-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.main-container .resume-content-container .resume-content .contact-container .contact-icons {
-  background-color: #666565;
-  width: 70%;
+.main-container .resume-content-container .resume-content {
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.main-container .resume-content-container .resume-content h2 {
+  font-family: Playfair Display SC;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 0 2rem 0;
 }

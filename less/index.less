@@ -58,7 +58,7 @@ html, body {
 }
 
 
-
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&display=swap');
 
 // ------My Code begins here--------
 
@@ -81,6 +81,9 @@ html, body {
 
 	// Fonts
 
+	@font-raleway: Raleway;
+	@font-playfair: Playfair Display SC;
+
 
 
 // Mixins
@@ -100,6 +103,43 @@ html, body {
 	}
 
 
+	// Fonts
+	.raleway-regular{
+		font-family: @font-raleway;
+		font-weight: 400; 
+	}
+	.raleway-medium{
+		font-family: @font-raleway;
+		font-weight: 500; 
+	}
+	.raleway-semi-bold{
+		font-family: @font-raleway;
+		font-weight: 600; 
+	}
+	.raleway-bold{
+		font-family: @font-raleway;
+		font-weight: 700; 
+	}
+	.raleway-extra-bold{
+		font-family: @font-raleway;
+		font-weight: 800; 
+	}
+	.raleway-black{
+		font-family: @font-raleway;
+		font-weight: 900; 
+	}
+	.playfair-regular{
+		font-family: @font-playfair;
+		font-weight: 400;
+	}
+	.playfair-bold{
+		font-family: @font-playfair;
+		font-weight: 700;
+	}
+	.playfair-black{
+		font-family: @font-playfair;
+		font-weight: 900;
+	}
 
 
 
@@ -110,13 +150,12 @@ html, body {
 
 // Main Container
 .main-container{
+	margin: auto;
 	.flex-column();
 	padding: 1rem 1rem 1rem 1rem;
-	align-content: center;
-	margin: auto;
+	align-items: center;
 	width: 100%;
 	background-color: @color-base-white;
-
 	@media screen and (min-width: 1300px) {
 		width: 1200px;
 	}
@@ -124,10 +163,11 @@ html, body {
 
 	// Heading Container
 	.resume-heading{
+		margin: auto
 		.flex-column();
 		justify-content: space-between;
+		align-items: center;
 		text-align: center;
-		// background-color: #444622;
 
 		.fa-user-circle{
 			margin: 3.5rem 0 3.5rem 0;
@@ -135,16 +175,18 @@ html, body {
 
 
 		.person-name{
+			.playfair-bold();
 			font-size: 4rem;
 			color: @color-dark-grey;
 			margin: 0 0 2rem 0;
 		}
 
 		.person-title{
+			.playfair-regular();
 			margin: auto;
 			margin-bottom: 2rem;
 			padding: .5rem 0 .5rem 0;
-			font-size: 1.2rem;
+			font-size: 2rem;
 			color: @color-dark-grey;
 			width: 95%;
 			border-top: solid .075rem @color-dark-gold;
@@ -158,6 +200,7 @@ html, body {
 	.resume-content-container{
 		margin: auto;
 		.flex-column();
+		.raleway-regular();
 		justify-content: space-evenly;
 		width: 95%;
 		font-size: 1.5rem;
@@ -171,39 +214,41 @@ html, body {
 			
 		}
 
+		// .profile-container{
+
+		// }
+
+		// .skills-container{
+
+		// }
+
+		// .projects-container{
+
+		// }
+
+		.contact-container{
+			.flex-column();
+			justify-content: center;
+			align-items: center;
+
+			.contact-icons{
+
+			}
+		}
+
 
 		.resume-content{
 			.content-box-margins-padding();
 
 			h2{
+				.playfair-bold();
 				text-align: center;
-				padding: 0 0 1rem 0;
+				padding: 0 0 2rem 0;
 			}
 
-			.profile-container{
-
-			}
-
-			.skills-container{
-
-			}
-
-			.projects-container{
-
-			}
-
-			.contact-container{
-				.flex-column();
-				justify-content: center;
-				align-items: center;
-
-
-				.contact-icons{
-					background-color: #666565;
-					width: 70%;
-				}
-			}
 		}
+
+
 
 
 	}
