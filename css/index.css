@@ -153,10 +153,10 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
+  padding: 1rem 1rem 1rem 1rem;
   align-content: center;
   margin: auto;
   width: 100%;
-  height: 800px;
   background-color: #efefed;
 }
 @media screen and (min-width: 1300px) {
@@ -194,12 +194,29 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   width: 95%;
-  background-color: aqua;
   font-size: 1.5rem;
   color: #161911;
+}
+.main-container .resume-content-container .content-separator {
+  margin: auto;
+  border-top: solid 0.075rem #99794b;
+  width: 95%;
 }
 .main-container .resume-content-container .resume-content {
   margin: 1rem 1rem 1rem 1rem;
   padding: 2rem 2rem 2rem 2rem;
-  background-color: blue;
+}
+.main-container .resume-content-container .resume-content h2 {
+  text-align: center;
+  padding: 0 0 1rem 0;
+}
+.main-container .resume-content-container .resume-content .contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .resume-content-container .resume-content .contact-container .contact-icons {
+  background-color: #666565;
+  width: 70%;
 }

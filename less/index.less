@@ -111,10 +111,10 @@ html, body {
 // Main Container
 .main-container{
 	.flex-column();
+	padding: 1rem 1rem 1rem 1rem;
 	align-content: center;
 	margin: auto;
 	width: 100%;
-	height: 800px;
 	background-color: @color-base-white;
 
 	@media screen and (min-width: 1300px) {
@@ -160,14 +160,49 @@ html, body {
 		.flex-column();
 		justify-content: space-evenly;
 		width: 95%;
-		background-color: aqua;
 		font-size: 1.5rem;
 		color: @color-dark-grey;
 
 
+		.content-separator{
+			margin: auto;
+			border-top: solid .075rem @color-dark-gold;
+			width: 95%;
+			
+		}
+
+
 		.resume-content{
 			.content-box-margins-padding();
-			background-color: blue;
+
+			h2{
+				text-align: center;
+				padding: 0 0 1rem 0;
+			}
+
+			.profile-container{
+
+			}
+
+			.skills-container{
+
+			}
+
+			.projects-container{
+
+			}
+
+			.contact-container{
+				.flex-column();
+				justify-content: center;
+				align-items: center;
+
+
+				.contact-icons{
+					background-color: #666565;
+					width: 70%;
+				}
+			}
 		}
 
 
