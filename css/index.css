@@ -138,35 +138,68 @@ body {
   font-size: 62.5%;
 }
 /* =10px */
-.flex-column-centered {
+.flex-column {
   display: flex;
   flex-direction: column;
-  align-content: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.content-box-margins-padding {
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 2rem;
 }
 .main-container {
-  width: 1200px;
-  height: 800px;
-  background-color: whitesmoke;
-}
-.resume-heading {
-  height: 400px;
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-evenly;
+  margin: auto;
+  width: 100%;
+  height: 800px;
+  background-color: #efefed;
+}
+@media screen and (min-width: 1300px) {
+  .main-container {
+    width: 1200px;
+  }
+}
+.main-container .resume-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
-.resume-heading .person-name {
-  margin: auto;
+.main-container .resume-heading .fa-user-circle {
+  margin: 3.5rem 0 3.5rem 0;
+}
+.main-container .resume-heading .person-name {
   font-size: 4rem;
   color: #161911;
+  margin: 0 0 2rem 0;
 }
-.resume-heading .person-title {
+.main-container .resume-heading .person-title {
   margin: auto;
+  margin-bottom: 2rem;
   padding: 0.5rem 0 0.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #161911;
   width: 95%;
-  border-top: solid 0.2rem #DBCDAF;
-  border-bottom: solid 0.2rem #DBCDAF;
+  border-top: solid 0.075rem #99794b;
+  border-bottom: solid 0.075rem #99794b;
+}
+.main-container .resume-content-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 95%;
+  background-color: aqua;
+  font-size: 1.5rem;
+  color: #161911;
+}
+.main-container .resume-content-container .resume-content {
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+  background-color: blue;
 }

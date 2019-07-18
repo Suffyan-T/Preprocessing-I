@@ -68,16 +68,35 @@ html, body {
 
 
 // Variables
-	@color-main-gold: #DBCDAF;
-	@color-main-black: #161911;
+
+	// Colors
+	@color-light-gold: #DBCDAF;
+	@color-med-gold: #b79c66;
+	@color-dark-gold: #99794b;
+	@color-base-white: #efefed;
+	@color-light-grey: #A09F9F;
+	@color-med-grey: #666565;
+	@color-dark-grey: #161911;
+	@color-base-green: #444622;
+
+	// Fonts
 
 
 
 // Mixins
-	.flex-column-centered {
+	.flex-column {
 		display: flex;
 		flex-direction: column;
-		align-content: center;
+	}
+
+	.flex-row {
+		display: flex;
+		flex-direction: row
+	}
+
+	.content-box-margins-padding{
+		margin: 1rem 1rem 1rem 1rem;
+		padding: 2rem 2rem 2rem 2rem;
 	}
 
 
@@ -87,34 +106,71 @@ html, body {
 
 
 //------ Styles -------//
+
+
+// Main Container
 .main-container{
-	width: 1200px;
+	.flex-column();
+	align-content: center;
+	margin: auto;
+	width: 100%;
 	height: 800px;
-	background-color: whitesmoke;
-}
-.resume-heading{
-	height: 400px;
-	.flex-column-centered();
-	justify-content: space-evenly;
-	text-align: center;
+	background-color: @color-base-white;
 
-	
-	.person-name{
-		margin: auto;
-		font-size: 4rem;
-		color: @color-main-black
+	@media screen and (min-width: 1300px) {
+		width: 1200px;
 	}
 
-	.person-title{
+
+	// Heading Container
+	.resume-heading{
+		.flex-column();
+		justify-content: space-between;
+		text-align: center;
+		// background-color: #444622;
+
+		.fa-user-circle{
+			margin: 3.5rem 0 3.5rem 0;
+		}
+
+
+		.person-name{
+			font-size: 4rem;
+			color: @color-dark-grey;
+			margin: 0 0 2rem 0;
+		}
+
+		.person-title{
+			margin: auto;
+			margin-bottom: 2rem;
+			padding: .5rem 0 .5rem 0;
+			font-size: 1.2rem;
+			color: @color-dark-grey;
+			width: 95%;
+			border-top: solid .075rem @color-dark-gold;
+			border-bottom: solid .075rem @color-dark-gold;
+		}
+
+	}
+
+
+	// Content Container
+	.resume-content-container{
 		margin: auto;
-		padding: .5rem 0 .5rem 0;
-		font-size: 1.3rem;
-		color: @color-main-black;
+		.flex-column();
+		justify-content: space-evenly;
 		width: 95%;
-		border-top: solid .2rem @color-main-gold;
-		border-bottom: solid .2rem @color-main-gold;
+		background-color: aqua;
+		font-size: 1.5rem;
+		color: @color-dark-grey;
+
+
+		.resume-content{
+			.content-box-margins-padding();
+			background-color: blue;
+		}
+
+
 	}
 
-	
 }
-
